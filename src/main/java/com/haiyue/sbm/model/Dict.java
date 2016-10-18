@@ -13,55 +13,10 @@ public class Dict implements Serializable {
     private String id;
     private String keyword;
     private String nature;
-    private Integer freq;
-    private Float value;
     private Date createdOn;
     private Date updatedOn;
     private Integer delStatus;
     private String pinyin;
-    private String conversionAll;
-    private String conversionSpace;
-    private Mapping mapping;
-
-    public Float getValue() {
-        return value;
-    }
-
-    public void setValue(Float value) {
-        this.value = value;
-    }
-
-    public String getPinyin() {
-        return pinyin;
-    }
-
-    public void setPinyin(String pinyin) {
-        this.pinyin = pinyin;
-    }
-
-    public Mapping getMapping() {
-        return mapping;
-    }
-
-    public void setMapping(Mapping mapping) {
-        this.mapping = mapping;
-    }
-
-    public String getConversionAll() {
-        return conversionAll;
-    }
-
-    public void setConversionAll(String conversionAll) {
-        this.conversionAll = conversionAll;
-    }
-
-    public String getConversionSpace() {
-        return conversionSpace;
-    }
-
-    public void setConversionSpace(String conversionSpace) {
-        this.conversionSpace = conversionSpace;
-    }
 
     public String getId() {
         return id;
@@ -85,14 +40,6 @@ public class Dict implements Serializable {
 
     public void setNature(String nature) {
         this.nature = nature;
-    }
-
-    public Integer getFreq() {
-        return freq;
-    }
-
-    public void setFreq(Integer freq) {
-        this.freq = freq;
     }
 
     public Date getCreatedOn() {
@@ -119,22 +66,11 @@ public class Dict implements Serializable {
         this.delStatus = delStatus;
     }
 
+    public String getPinyin() {
+        return pinyin;
+    }
 
-    @Override
-    public String toString() {
-        return "Dict{" +
-                "id='" + id + '\'' +
-                ", keyword='" + keyword + '\'' +
-                ", nature='" + nature + '\'' +
-                ", freq=" + freq +
-                ", value=" + value +
-                ", createdOn=" + createdOn +
-                ", updatedOn=" + updatedOn +
-                ", delStatus=" + delStatus +
-                ", pinyin='" + pinyin + '\'' +
-                ", conversionAll='" + conversionAll + '\'' +
-                ", conversionSpace='" + conversionSpace + '\'' +
-                ", mapping=" + mapping +
-                '}';
+    public void setPinyin(String pinyin) {
+        this.pinyin = pinyin;
     }
 }

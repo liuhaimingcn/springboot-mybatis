@@ -2,12 +2,10 @@ package com.haiyue.sbm.service.impl;
 
 
 import com.haiyue.sbm.mapper.DictMapper;
-import com.haiyue.sbm.model.Dict;
 import com.haiyue.sbm.service.DictService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

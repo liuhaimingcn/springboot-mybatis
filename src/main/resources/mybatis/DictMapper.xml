@@ -6,36 +6,15 @@
         <result column="keyword" property="keyword" jdbcType="VARCHAR"/>
         <result column="nature" property="nature" jdbcType="VARCHAR"/>
         <result column="pinyin" property="pinyin" jdbcType="VARCHAR"/>
-        <result column="freq" property="freq" jdbcType="INTEGER"/>
-        <result column="value" property="value" jdbcType="FLOAT"/>
         <result column="created_on" property="createdOn" jdbcType="TIMESTAMP"/>
         <result column="updated_on" property="updatedOn" jdbcType="TIMESTAMP"/>
         <result column="del_status" property="delStatus" jdbcType="INTEGER"/>
-        <result column="conversion_all" property="conversionAll" jdbcType="VARCHAR"/>
-        <result column="conversion_space" property="conversionSpace" jdbcType="VARCHAR"/>
     </resultMap>
-
-    <resultMap id="MappingResultMap" type="com.haiyue.sbm.model.Mapping">
-        <id column="id" property="id" jdbcType="VARCHAR"/>
-        <result column="mapping_word" property="mappingWord" jdbcType="VARCHAR"/>
-    </resultMap>
-
-    <resultMap id="DetailResultMap" type="com.haiyue.sbm.model.Dict" extends="BaseResultMap">
-        <association property="mapping" columnPrefix="p_" resultMap="MappingResultMap"/>
-    </resultMap>
-
-    <sql id="Base_Column_List">
-        t1.id, t1.keyword, t1.nature, t1.conversion_all, t1.conversion_space, t1.freq, t1.created_on, t1.updated_on, t1.del_status
-    </sql>
 
     <select id="getLtsKeywordsByPinyin" parameterType="map" resultType="string">
         select keyword
         from tb_lts_dict
         where pinyin= #{keyword, jdbcType=VARCHAR} and nature = #{nature, jdbcType=VARCHAR}
-    </select>
-
-    <select id="getSum" resultType="long">
-        select count(id) from tb_lts_dict
     </select>
 
 </mapper>
