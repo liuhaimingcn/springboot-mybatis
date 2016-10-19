@@ -35,8 +35,3 @@ druidConfig:
 mybatisConfig:
     typeAliasesPackage: com.haiyue.sbm.model
     mapperLocations: classpath:mybatis/*.xml
-
-logging:
-    level:
-        root: INFO
-        com.haiyue.sbm: DEBUG

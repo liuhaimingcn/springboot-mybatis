@@ -1,0 +1,26 @@
+{
+  "configuration": {
+    "status": "OFF",
+    "loggers": {
+      "root": {
+        "level": "INFO",
+        "appender-ref": {
+          "ref": "stdout"
+        }
+      },
+      "logger": {
+        "name": "com.haiyue.sbm",
+        "level": "DEBUG"
+      }
+    },
+    "appenders": {
+      "Console": {
+        "name": "stdout",
+        "target": "SYSTEM_OUT",
+        "PatternLayout": {
+          "pattern": "%highlight{%-d{yyyy-MM-dd HH:mm:ss} %level %m - [%c{10}:%line]%n}{ERROR=red, WARN=yellow, INFO=black, DEBUG=white}"
+        }
+      }
+    }
+  }
+}
